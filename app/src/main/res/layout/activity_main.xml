@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipeRefresh"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presenter.view.MainActivity"
+    android:orientation="vertical"
+    android:background="#EDE7E7">
+
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/image_slider"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        app:iss_auto_cycle="true"
+        app:iss_period="1000"
+        app:iss_delay="1000"
+        app:iss_text_align="CENTER"
+        tools:ignore="MissingClass"
+        />
+
+    <TextView
+        android:id="@+id/tvTituloBolsas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Acompanhe as principais Bolsas do Mercado"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/rcmerregular"
+        android:textColor="@color/corTexto"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.github.nikartm.button.FitButton
+            android:id="@+id/buttoIbovespa"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            app:fb_backgroundColor="@color/black"
+            app:fb_shape="circle"
+            app:fb_text="Ibovespa"
+            app:fb_textSize="10dp"
+            app:fb_textAllCaps="true"
+            app:fb_textColor="#FFF"
+            app:fb_textPaddingEnd="16dp"
+            app:fb_textPaddingStart="16dp" />
+
+        <com.github.nikartm.button.FitButton
+            android:id="@+id/buttonNasdaq"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            app:fb_backgroundColor="@color/black"
+            app:fb_shape="circle"
+            app:fb_text="Nasdaq"
+            app:fb_textSize="10dp"
+            app:fb_textAllCaps="true"
+            app:fb_textColor="#FFF"
+            app:fb_textPaddingEnd="16dp"
+            app:fb_textPaddingStart="16dp" />
+
+        <com.github.nikartm.button.FitButton
+            android:id="@+id/buttonDownJones"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            app:fb_backgroundColor="@color/black"
+            app:fb_shape="circle"
+            app:fb_text="DowJones"
+            app:fb_textSize="10dp"
+            app:fb_textAllCaps="true"
+            app:fb_textColor="#FFF"
+            app:fb_textPaddingEnd="16dp"
+            app:fb_textPaddingStart="16dp" />
+
+        <com.github.nikartm.button.FitButton
+            android:id="@+id/buttonNikei"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            app:fb_backgroundColor="@color/black"
+            app:fb_shape="circle"
+            app:fb_text="Nikkei"
+            app:fb_textSize="10dp"
+            app:fb_textAllCaps="true"
+            app:fb_textColor="#FFF"
+            app:fb_textPaddingEnd="16dp"
+            app:fb_textPaddingStart="16dp" />
+
+
+    </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:elevation="4dp"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNomeBolsa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="N/d"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvLocalicao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="N/d"
+            android:textSize="18sp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvPontos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="N/d"
+            android:textSize="26sp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvVariacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="N/d"
+            android:textSize="26sp"
+            android:textColor="#3F51B5"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvTituloTaxas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Taxas do Mercado"
+        android:textSize="20sp"
+        android:textColor="@color/corTexto"
+        android:textStyle="bold"
+        android:fontFamily="@font/rcmerregular"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_taxas"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+       />
+
+    <TextView
+        android:id="@+id/tvInfoBitcoin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mercado Bitcoin"
+        android:textSize="20sp"
+        android:fontFamily="@font/rcmerregular"
+        android:textColor="@color/corTexto"
+        android:textStyle="bold"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+
+    <include
+        android:id="@+id/include_info_bitcoin"
+        layout="@layout/item_bitcoin_info"/>
+
+
+    <TextView
+        android:id="@+id/tvMoedas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Moedas"
+        android:textSize="20sp"
+        android:fontFamily="@font/rcmerregular"
+        android:textColor="@color/corTexto"
+        android:textStyle="bold"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        >
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tvRecuperarMoedas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="N/D"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"/>
+
+        </HorizontalScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/tvHGBrasil"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="API: https://hgbrasil.com"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textStyle="bold|italic"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="25dp"/>
+
+
+</LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
