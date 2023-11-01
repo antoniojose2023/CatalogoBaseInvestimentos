@@ -14,7 +14,7 @@
 # Telas da aplicação
 
 <div aling="center">
-    <img src ="https://user-images.githubusercontent.com/92251761/279784422-d0a4c7e8-9d55-4820-9707-a0067c1ae0dd.jpeg" width="120px" heigth="180px"/>
+    <img src ="https://user-images.githubusercontent.com/92251761/279784422-d0a4c7e8-9d55-4820-9707-a0067c1ae0dd.jpeg" width="180px"/>
 <div/>
 
 
